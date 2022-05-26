@@ -18,14 +18,8 @@
   position: relative;
 }
 
-.btn-signup {
-  position: absolute;
-  left: 90%;
-  top: 3%;
-}
-
-.footer {
-  border-top: 2px solid #FFFFFF;
+.form-signup {
+  width: 70%;
 }
 
 @media screen and (max-width: 600px) {
@@ -35,17 +29,20 @@
   }
 }
 
-@media screen and (max-width: 795px) {
-  .btn-signup {
-    position: static;
-    display: none;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .footer {
     margin-top: 24px;
     padding-top: 12px;
     text-align: center;
+  }
+
+  .form-signup {
+    width: 90%;
+  }
+
+  .btn-signup {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
   }
 }
