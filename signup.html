@@ -15,9 +15,15 @@
 </head>
 <body class="bg-secondary01">
   <header class="container-fluid my-4 px-4">
-    <h1 class="font-nunito text-warning nav-brand">
-      <i class="fa-solid fa-recycle"></i>
-      E-Recicle
+    <h1 class="font-nunito nav-brand">
+      <a 
+        href="./index.html" 
+        class="text-warning"
+        style="text-decoration: none;"
+      >
+        <i class="fa-solid fa-recycle"></i>
+        E-Recicle
+      </a>
     </h1>
   </header>
 
@@ -61,15 +67,27 @@
         >
       </div>
 
+      <div class="form-group">
+        <input
+          class="form-control"
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Senha"
+          maxlength="12"
+          required
+        >
+      </div>
+
       <div> 
         <span>Idade:</span>       
         <div class="form-check">        
-          <input class="form-check-input" type="radio" id="age01" name="age" value="10 - 20">
-          <label class="form-check-label" for="age01">10 - 20</label>
+          <input class="form-check-input" type="radio" id="age01" name="age" value="Menos de 18">
+          <label class="form-check-label" for="age01">Menos de 18</label>
         </div>
         <div class="form-check">        
-          <input class="form-check-input" type="radio" id="age02" name="age" value="21 - 39">
-          <label class="form-check-label" for="age2">21 - 39</label>  
+          <input class="form-check-input" type="radio" id="age02" name="age" value="19 - 39">
+          <label class="form-check-label" for="age2">19 - 39</label>  
         </div>
         <div class="form-check">
           <input class="form-check-input" type="radio" id="age03" name="age" value="40 - 60">
@@ -103,43 +121,6 @@
   <script type="text/javascript" src="./js/popper.min.js"></script>
   <script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
 
-  <script type="text/javascript">
-    function getLocation() {
-      if (navigator.geolocation) {
-        let position = 
-          navigator.geolocation.getCurrentPosition(showPosition, (error) => {
-            console.log(error);
-          });
-      }
-      else {
-        //x.innerHTML="Seu browser não suporta Geolocalização.";
-        alert("Seu browser não suporta Geolocalização")
-      }
-    }
-    function showPosition(position) {
-      const { latitude, longitude } = position.coords;
-      alert("Latitude: " + latitude + ", Longitude: " + longitude);
-      const baseURL = 'https://nominatim.openstreetmap.org/reverse?';
-      const format = 'format=json';
-      const zoom = 'zoom=21';
-      const addrDetails = 'addressdetails=1';
-      const apiURL = 
-        `${baseURL}&${format}&lat=${latitude}&lon=${longitude}&${addrDetails}`;
-      fetch(apiURL)
-        .then((response) => {
-          return response.json();
-        })
-        .then((data) => {
-          console.log(data);
-        })
-        .catch(error => console.log(error));
-    }    
-    getLocation();
-
-    const navBrand = document.getElementsByClassName('nav-brand')[0];
-    navBrand.addEventListener('click', () => {
-      window.location = './index.html';
-    })
-  </script>
+  <script type="text/javascript" src="./js/geolocation.js"></script>
 </body>
 </html>
