@@ -15,7 +15,7 @@
 </head>
 <body class="bg-secondary01">
   <header class="container-fluid my-4 px-4">
-    <h1 class="font-nunito text-warning">
+    <h1 class="font-nunito text-warning nav-brand">
       <i class="fa-solid fa-recycle"></i>
       E-Recicle
     </h1>
@@ -135,6 +135,11 @@
         .catch(error => console.log(error));
     }    
     getLocation();
+
+    const navBrand = document.getElementsByClassName('nav-brand')[0];
+    navBrand.addEventListener('click', () => {
+      window.location = './index.html';
+    })
   </script>
 </body>
 </html>
