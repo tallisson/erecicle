@@ -1,8 +1,4 @@
 @charset 'utf-8';
-:root {
-  --w100: 100vw;
-  --h100: 100vh;
-}
 
 .font-nunito {
   font-family: 'Nunito', sans-serif;
@@ -18,14 +14,6 @@
   border: 2px solid #FFFFFF;
 }
 
-.border-rounded-50 {
-  border-radius: 50px;
-}
-
-.border-rounded-60 {
-  border-radius: 60px;
-}
-
 .pos-relative {
   position: relative;
 }
@@ -34,10 +22,6 @@
   position: absolute;
   left: 90%;
   top: 3%;
-}
-
-.btn-signup-form {
-  display: none;
 }
 
 .footer {
@@ -51,23 +35,10 @@
   }
 }
 
-@media screen and (max-width: 1050px) {
-  .btn-signup {
-    position: absolute;
-    left: 85%;
-    top: 3%;
-  }
-}
-
 @media screen and (max-width: 795px) {
   .btn-signup {
     position: static;
     display: none;
-  }
-
-
-  .btn-signup-form {
-    display: block;
   }
 }
 

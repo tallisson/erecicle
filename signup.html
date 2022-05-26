@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Recicle - Sign up</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css">  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/styles.css" type="text/css">
+  <link rel="icon" type="image/png" href="./imgs/icon.png">
+</head>
+<body class="bg-secondary01">
+  <header class="container-fluid my-4 px-4">
+    <h1 class="font-nunito text-warning">
+      <i class="fa-solid fa-recycle"></i>
+      E-Recicle
+    </h1>
+  </header>
+
+  <main class="container d-flex justify-content-center">
+    <form class="w-75 px-4 py-4 border01">
+      <fieldset class="text-center text-success">
+        <legend>Cadastre-se</legend>
+      </fieldset>
+      <div class="form-group">
+        <input
+          class="form-control"
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Seu nome"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <input
+          class="form-control"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="E-mail"
+          required
+          autocapitalize="off"
+        >
+      </div>
+
+      <div class="form-group">
+        <input
+          class="form-control"
+          type="email"
+          name="email-confirm"
+          id="email-confirm"
+          placeholder="Confirmação de E-mail"
+          required
+          autocapitalize="off"
+        >
+      </div>
+
+      <div> 
+        <span>Idade:</span>       
+        <div class="form-check">        
+          <input class="form-check-input" type="radio" id="age01" name="age" value="10 - 20">
+          <label class="form-check-label" for="age01">10 - 20</label>
+        </div>
+        <div class="form-check">        
+          <input class="form-check-input" type="radio" id="age02" name="age" value="21 - 39">
+          <label class="form-check-label" for="age2">21 - 39</label>  
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="age03" name="age" value="40 - 60">
+          <label class="form-check-label" for="age3">40 - 60</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="age04" name="age" value="Mais de 60">
+          <label class="form-check-label" for="age04">Mais de 60</label>
+        </div>
+      </div>
+
+      <div class="text-right">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </div>
+    </form>
+  </main>
+
+  <script type="text/javascript" src="./js/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/popper.min.js"></script>
+  <script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
+
+  <script type="text/javascript">
+    function getLocation() {
+      if (navigator.geolocation) {
+        let position = 
+          navigator.geolocation.getCurrentPosition(showPosition, showError);
+      }
+      else {
+        //x.innerHTML="Seu browser não suporta Geolocalização.";
+        alert("Seu browser não suporta Geolocalização")
+      }
+    }
+    function showPosition(position) {
+      const latitude = -5.5076596;
+      const longitude= -45.3129065;
+      console.log("Latitude: " + position.coords.latitude + 
+        ", Longitude: " + position.coords.longitude);
+      const baseURL = 'https://nominatim.openstreetmap.org/reverse?';
+      const format = 'format=json';
+      const zoom = 'zoom=21';
+      const addrDetails = 'addressdetails=1';
+      const apiURL = 
+        `${baseURL}&${format}&lat=${latitude}&lon=${longitude}&${addrDetails}`;
+      fetch(apiURL)
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data);
+        })
+        .catch(error => console.log(error));
+    }
+    function showError(error)
+    {
+      switch(error.code) {
+      case error.PERMISSION_DENIED:
+        x.innerHTML="Usuário rejeitou a solicitação de Geolocalização."
+        break;
+      case error.POSITION_UNAVAILABLE:
+        x.innerHTML="Localização indisponível."
+        break;
+      case error.TIMEOUT:
+        x.innerHTML="A requisição expirou."
+        break;
+      case error.UNKNOWN_ERROR:
+        x.innerHTML="Algum erro desconhecido aconteceu."
+        break;
+      }
+    }
+    getLocation();
+  </script>
+</body>
+</html>
