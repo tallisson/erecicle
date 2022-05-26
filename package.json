@@ -1,0 +1,8 @@
+{
+  "name": "erecicle",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/tallisson/erecicle.git",
+  "author": "Thiago Allisson <thiago.ribeiro@ifma.edu.br>",
+  "license": "MIT"
+}
