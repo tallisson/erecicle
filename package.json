@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "https://github.com/tallisson/erecicle.git",
   "author": "Thiago Allisson <thiago.ribeiro@ifma.edu.br>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
