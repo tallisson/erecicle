@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Recicle - Login</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css">  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/styles.css" type="text/css">
+  <link rel="icon" type="image/png" href="./imgs/icon.png">
+</head>
+<body class="container bg-secondary01 pos-relative py-4">
+  <section class="btn-signup">
+    <button class="btn btn-primary font-weight-bold">
+      <i class="fa-solid fa-arrow-right-to-bracket"></i>
+      Cadastre-se            
+    </button>
+  </section>
+
+  <main class="row mb-4 content">   
+    <div class="col-md-6 border01 rounded px-2 py-4 my-4">
+      <div>
+        <h1 class="text-center text-warning font-nunito mb-2">
+          <i class="fa-solid fa-recycle"></i>
+          E-Recicle
+        </h1>
+        <h2 class="text-success text-center">
+          Seu aplicativo para auxiliar na coleta e reciclagem de óleo de cozinha
+        </h2>
+      </div>
+
+      <form>      
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input 
+            type="email" 
+            id="email" 
+            class="form-control"
+            placeholder="E-mail"
+            autocomplete="off"
+            autocapitalize="off"
+          >
+        </div>
+      
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <input 
+            type="password" 
+            id="password" 
+            class="form-control"
+            placeholder="Senha"
+            autocomplete="off"
+          >
+        </div>
+  
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-success btn-block mb-4 text-dark font-weight-bold">
+          <i class="fa-solid fa-arrow-right-to-bracket"></i>      
+          Entrar
+        </button>
+        <button type="button" class="btn btn-primary btn-block mb-4 btn-signup-form font-weight-bold">
+          <i class="fa-solid fa-arrow-right-to-bracket"></i>
+          Cadastre-se
+        </button>
+  
+        <hr>
+  
+        <div class="mb-4">
+          <div class="text-center px-4">
+            <!-- Simple link -->
+            <a href="#!">Esqueceu a Senha?</a>
+          </div>
+        </div>
+  
+        <hr>
+          
+        <!-- Register button -->
+        <div class="text-center">          
+          <button type="button" class="btn border border-warning btn-block text-dark align-middle">
+            <img src="./imgs/google-icon.png">
+            Entre com o Google
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-md-6 my-auto pl-4">
+      <img
+        src="./imgs/Pessoinhas.png"
+        alt="Imagem de Pessoas Reciclando"
+        class="img-fluid"
+      >
+    </div>
+  </main>
+
+  <footer class="text-muted footer mt-4 py-2">
+    <small class="d-block">E-Recicle &copy; 2022, IFMA - Campus Barra do Corda</small>
+    <small class="d-block">
+      <a href="https://maps.app.goo.gl/JhYVqorQedDmapxq9" class="text-muted" target="__blank__">
+        <i class="fa-solid fa-location-pin"></i>  
+        BR-226, S/N - Vila Nenzim, Barra do Corda - MA, 65950-000
+      </a>
+    </small>
+  </footer>
+
+  <script type="text/javascript" src="./js/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/popper.min.js"></script>
+  <script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

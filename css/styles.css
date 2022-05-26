@@ -1,0 +1,80 @@
+@charset 'utf-8';
+:root {
+  --w100: 100vw;
+  --h100: 100vh;
+}
+
+.font-nunito {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.bg-secondary01 {
+  background-color: #F0F0F5;
+}
+
+.border01 {
+  border: 2px solid #FFFFFF;
+}
+
+.border-rounded-50 {
+  border-radius: 50px;
+}
+
+.border-rounded-60 {
+  border-radius: 60px;
+}
+
+.pos-relative {
+  position: relative;
+}
+
+.btn-signup {
+  position: absolute;
+  left: 90%;
+  top: 3%;
+}
+
+.btn-signup-form {
+  display: none;
+}
+
+.footer {
+  border-top: 2px solid #FFFFFF;
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .btn-signup {
+    position: absolute;
+    left: 85%;
+    top: 3%;
+  }
+}
+
+@media screen and (max-width: 795px) {
+  .btn-signup {
+    position: static;
+    display: none;
+  }
+
+
+  .btn-signup-form {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    margin-top: 24px;
+    padding-top: 12px;
+    text-align: center;
+  }
+}
