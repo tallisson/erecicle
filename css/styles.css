@@ -49,4 +49,5 @@
 
 .nav-brand:hover {
   cursor: pointer;
+  text-decoration: none;
 }
