@@ -9,20 +9,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link href="https://db.onlinewebfonts.com/c/b9b4e2e298a645a5868a6fa0c08bede3?family=Oduda" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="./css/styles.css" type="text/css">
   <link rel="icon" type="image/png" href="./imgs/icon.png">
 </head>
 <body class="bg-secondary01">
   <header class="container-fluid my-4 px-4">
-    <h1 class="font-nunito nav-brand">
-      <a 
-        href="./index.html" 
-        class="text-warning"
-      >
+    <h1 class="font-oduda text-warning">
+      <span class="nav-brand">
         <i class="fa-solid fa-recycle"></i>
         E-Recicle
-      </a>
+      </span>
     </h1>
   </header>
 
@@ -106,7 +104,7 @@
     </form>
   </main>
 
-  <footer class="container text-muted footer mt-4 py-4 text-center">
+  <footer class="container text-muted footer mt-2 py-4 text-center">
     <small class="d-block">E-Recicle &copy; 2022, IFMA - Campus Barra do Corda</small>
     <small class="d-block">
       <a href="https://maps.app.goo.gl/JhYVqorQedDmapxq9" class="text-muted" target="__blank__">
@@ -119,7 +117,14 @@
   <script type="text/javascript" src="./js/jquery.min.js"></script>
   <script type="text/javascript" src="./js/popper.min.js"></script>
   <script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
-
   <script type="text/javascript" src="./js/geolocation.js"></script>
+  <script type="text/javascript">
+    window.onload = () => {
+      const navBrand = document.getElementsByClassName('nav-brand')[0];
+      navBrand.addEventListener('click', () => {
+        window.location = './index.html';
+      });
+    }
+  </script>
 </body>
 </html>
