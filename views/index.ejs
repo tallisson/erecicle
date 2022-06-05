@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <%- include('sections/head'); %>
+  <%- include('partials/head', { title: 'E-Recicle - Home' }); %>
 </head>
 <body class="container bg-secondary01 pos-relative py-2">
-  <%- include('sections/main'); %>
+  <%- include('partials/index/main'); %>
 
-  <%- include('sections/footer'); %>
+  <%- include('partials/footer'); %>
 
-  <%- include('sections/scripts.ejs');  %> 
+  <%- include('partials/scripts.ejs');  %> 
 </body>
 </html>
