@@ -1,14 +1,14 @@
-function getLocation() {
+const getLocation = () => {
   if (navigator.geolocation) {
     let position = 
-      navigator.geolocation.getCurrentPosition(showPosition, (error) => {
+      navigator.geolocation.getCurrentPosition(getPosition, (error) => {
         console.log(error);
       });
   } else {
     alert("Seu browser não suporta Geolocalização")
   }
 }
-function showPosition(position) {
+const getPosition = (position) => {
   const { latitude, longitude } = position.coords;  
   const baseURL = 'https://nominatim.openstreetmap.org/reverse?';
   const format = 'format=json';
@@ -21,9 +21,10 @@ function showPosition(position) {
       return response.json();
     })
     .then((data) => {
-      alert("Latitude: " + latitude + ", Longitude: " + longitude);
-      console.log(data);
+      console.log(data, latitude, longitude);
     })
     .catch(error => console.log(error));
 }    
-getLocation();
+(() => {
+  getLocation();
+})();
