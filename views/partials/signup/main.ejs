@@ -1,8 +1,31 @@
 <main class="container-fluid d-flex justify-content-center mb-2">
   <form class="px-4 py-4 border01 form-signup">
-    <fieldset class="text-center text-success">
-      <legend>Cadastre-se</legend>
+    <fieldset>
+      <legend class="legend text-primary01">
+        Cadastre-se
+      </legend>
+      <p class="p-legend text-secondary01">Preencha os dados</p>
     </fieldset>
+    <div 
+      class="form-group image-container text-center align-self-center border-dark rounded"
+    >
+      <img 
+        src="./imgs/img-upload.png" 
+        alt="Selecione uma imagem"
+        class="img-upload"
+      >
+      <input
+        type="file"
+        accept="image/*"
+        name="image"
+        style="display: none;"
+      >
+    </div>
+
+    <p class="p-sublegend text-primary01">
+      Dados
+    </p>
+
     <div class="form-group">
       <input
         class="form-control"

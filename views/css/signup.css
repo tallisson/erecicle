@@ -1,0 +1,34 @@
+@charset 'utf-8';
+
+:root {
+  --primary01: #322153;
+  --secondary01: #6C6C80;
+}
+
+.legend {
+  font-size: 36px;
+  line-height: 46px;
+  font-weight: bold;
+}
+
+.text-primary01 {
+  color: var(--primary01);  
+}
+
+.p-legend {
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.text-secondary01 {
+  color: var(--secondary01);
+}
+
+.img-upload:hover {
+  cursor: pointer;
+}
+
+.p-sublegend {
+  font-size: 24px;
+  font-weight: bold;
+}
