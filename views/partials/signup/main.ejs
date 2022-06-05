@@ -4,15 +4,15 @@
       <legend class="legend text-primary01">
         Cadastre-se
       </legend>
-      <p class="p-legend text-secondary01">Preencha os dados</p>
+      <p class="p-legend text-secondary02">Preencha os dados</p>
     </fieldset>
     <div 
-      class="form-group image-container text-center align-self-center border-dark rounded"
+      class="form-group image-container text-center align-self-center rounded"
     >
       <img 
         src="./imgs/img-upload.png" 
         alt="Selecione uma imagem"
-        class="img-upload"
+        class="img-upload img-fluid"
       >
       <input
         type="file"
@@ -27,54 +27,90 @@
     </p>
 
     <div class="form-group">
+      <label for="name">
+        <span class="text-secondary02">
+          Nome <i class="text-danger">*</i>
+        </span>
+      </label>
       <input
         class="form-control"
         type="text"
         name="name"
         id="name"
-        placeholder="Seu nome"
         required
       >
     </div>
 
     <div class="form-group">
+      <label for="whats">
+        <span class="text-secondary02">
+          Whatsapp <i class="text-danger">*</i>
+        </span>
+      </label>
+      <input
+        class="form-control"
+        type="tel"
+        name="whats"
+        id="whats"
+        required
+        autocapitalize="off"
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="name">
+        <span class="text-secondary02">
+          E-mail <i class="text-danger">*</i>
+        </span>
+      </label>
       <input
         class="form-control"
         type="email"
         name="email"
         id="email"
-        placeholder="E-mail"
         required
         autocapitalize="off"
       >
     </div>
 
     <div class="form-group">
+      <label for="name">
+        <span class="text-secondary02">
+          Confirmar e-mail <i class="text-danger">*</i>
+        </span>
+      </label>
       <input
         class="form-control"
         type="email"
         name="email-confirm"
         id="email-confirm"
-        placeholder="Confirmação de E-mail"
         required
         autocapitalize="off"
       >
     </div>
 
     <div class="form-group">
+      <label for="name">
+        <span class="text-secondary02">
+          Senha <i class="text-danger">*</i>
+        </span>
+      </label>
       <input
         class="form-control"
         type="password"
         name="password"
         id="password"
-        placeholder="Senha"
         maxlength="12"
         required
       >
     </div>
 
     <div> 
-      <span>Idade:</span>       
+      <label class="text-secondary02">
+        <span>
+          Idade <i class="text-danger">*</i>
+        </span>
+      </label>       
       <div class="form-check">        
         <input class="form-check-input" type="radio" id="age01" name="age" value="Menos de 18">
         <label class="form-check-label" for="age01">Menos de 18</label>
@@ -93,9 +129,30 @@
       </div>
     </div>
 
+    <div class="form-group mt-2">
+      <label for="bio" class="text-secondary02">
+        <span>
+          Biografia <i class="text-danger">*</i>
+        </span>
+      </label>
+      <textarea
+        name="bio"
+        id="bio"
+        class="w-100 text-primary01 text-bold font-size-18 rounded bg-secondary03"
+        rows="5"
+      ></textarea>
+    </div>
+    
+    <p class="p-sublegend">
+      Endereço <i class="text-danger">*</i>
+    </p>
+    <div class="form-group">
+      
+    </div>
+
     <div class="text-right">
-      <button type="submit" class="btn btn-primary btn-signup font-weight-bold">
-        Enviar
+      <button type="submit" class="btn btn-success btn-signup font-weight-bold">
+        Finalizar Cadastro
       </button>
     </div>
   </form>

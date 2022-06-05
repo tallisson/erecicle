@@ -43,18 +43,4 @@
     padding-top: 12px;
     text-align: center;
   }
-
-  .form-signup {
-    width: 90%;
-  }
-
-  .btn-signup {
-    margin-top: 20px;
-    display: block;
-    width: 100%;
-  }
-}
-
-.nav-brand:hover {
-  cursor: pointer;
 }

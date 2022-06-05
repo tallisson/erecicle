@@ -2,7 +2,29 @@
 
 :root {
   --primary01: #322153;
-  --secondary01: #6C6C80;
+  --secondary02: #6C6C80;
+  --secondary03: #F0F0F5;
+}
+
+.text-primary01 {
+  color: var(--primary01);  
+}
+.text-secondary02 {
+  color: var(--secondary02);
+}
+
+.bg-primary01 {
+  background-color: var(--primary01);
+}
+.bg-secondary02 {
+  background-color: var(--secondary02);
+}
+.bg-secondary03 {
+  background-color: var(--secondary03);
+}
+
+.nav-brand:hover {
+  cursor: pointer;
 }
 
 .legend {
@@ -10,25 +32,34 @@
   line-height: 46px;
   font-weight: bold;
 }
-
-.text-primary01 {
-  color: var(--primary01);  
-}
-
 .p-legend {
   font-size: 15px;
   line-height: 25px;
 }
-
-.text-secondary01 {
-  color: var(--secondary01);
+.p-sublegend {
+  font-size: 24px;
+  font-weight: bold;
 }
 
+.img-upload {
+  border: 2px dashed var(--primary01);
+  border-radius: 10px;
+}
 .img-upload:hover {
   cursor: pointer;
 }
 
-.p-sublegend {
-  font-size: 24px;
-  font-weight: bold;
+.font-size-18 {
+  font-size: 18px;
+} 
+
+@media screen and (max-width: 768px) {
+  .form-signup {
+    width: 90%;
+  }
+  .btn-signup {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+  }
 }
