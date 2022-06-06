@@ -6,8 +6,8 @@
   "author": "Thiago Allisson <thiago.ribeiro@ifma.edu.br>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js"
+    "dev": "nodemon api/index.js",
+    "start": "node api/index.js"
   },
   "dependencies": {
     "ejs": "^3.1.8",

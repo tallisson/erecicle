@@ -6,11 +6,11 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
-app.set('views', './src/views');
+app.set('views', './api/views');
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-app.use(express.static(__dirname + '/src/views'));
+app.use(express.static(__dirname + '/views'));
 
 app.get('/', (req, res) => {
   res.render('index');
