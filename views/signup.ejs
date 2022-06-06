@@ -13,21 +13,9 @@
 
   <%- include('partials/scripts');  %>
 
-  <script type="text/javascript">
-    window.addEventListener('load', () => {
-      const navBrand = document.getElementsByClassName('nav-brand')[0];
-      navBrand.addEventListener('click', () => {
-        window.location = './index';
-      });
+  <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/build/ol.js"></script>
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList"></script>
 
-      const imageUpload = document.getElementsByClassName('img-upload')[0];
-      imageUpload.addEventListener('click', () => {
-        const inputFile = document.querySelector('input[type="file"');
-        inputFile.click();
-      })
-    });
-  </script>
-
-  <script type="module" src="./js/geolocation.js"></script>
+  <script type="module" src="./js/signup.js"></script>
 </body>
 </html>
