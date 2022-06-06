@@ -5,9 +5,6 @@
   "repository": "https://github.com/tallisson/erecicle.git",
   "author": "Thiago Allisson <thiago.ribeiro@ifma.edu.br>",
   "license": "MIT",
-  "engines": {
-    "node": "14.x"
-  },
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js"
