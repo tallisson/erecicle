@@ -3,10 +3,10 @@ import path from 'path';
 import {fileURLToPath} from 'url';
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 9000;
 
 app.set('view engine', 'ejs');
-app.set('views', './api/views');
+app.set('views', './views');
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
