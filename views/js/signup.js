@@ -41,6 +41,25 @@ window.addEventListener('load', () => {
     }
   }
 
+  const fillAddress = ({ 
+    city, 
+    road, 
+    neighbourhood,
+    state, 
+  }) => {
+    const roadInput = document.getElementById('road');
+    roadInput.value = road;
+
+    const nHoodInput = document.getElementById('nHood');
+    nHoodInput.value = neighbourhood;
+
+    const cityInput = document.getElementById('city');
+    cityInput.value = city;
+
+    const ufInput = document.getElementById('uf');
+    ufInput.value = state.substr(0, 2).toUpperCase();
+  }
+
   const generateMap = async (position) => {
     const { latitude, longitude } = position.coords;
     const map = new ol.Map({
@@ -58,9 +77,9 @@ window.addEventListener('load', () => {
 
     const response = await getPosition(position);
     if(response.ok) {
-      const { data } = response;
-      console.log(data.address);      
+      const { data } = response;            
       hideUl();
+      fillAddress(data.address);
     } else {
       const { error } = response;
       console.error(error);
