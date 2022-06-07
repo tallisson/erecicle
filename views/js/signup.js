@@ -41,23 +41,20 @@ window.addEventListener('load', () => {
     }
   }
 
-  const fillAddress = ({ 
-    city, 
-    road, 
-    neighbourhood,
-    state, 
-  }) => {
+  const fillAddress = (address) => {
+    const { road, city, town, neighborhood, suburb, state } = address;
+
     const roadInput = document.getElementById('road');
-    roadInput.value = road;
+    roadInput.value = road || '';
 
     const nHoodInput = document.getElementById('nHood');
-    nHoodInput.value = neighbourhood;
+    nHoodInput.value = suburb || neighborhood || '';
 
     const cityInput = document.getElementById('city');
-    cityInput.value = city;
+    cityInput.value = town || city || '';
 
     const ufInput = document.getElementById('uf');
-    ufInput.value = state.substr(0, 2).toUpperCase();
+    ufInput.value = (state ? state.substr(0, 2).toUpperCase() : '');
   }
 
   const generateMap = async (position) => {
@@ -79,6 +76,7 @@ window.addEventListener('load', () => {
     if(response.ok) {
       const { data } = response;            
       hideUl();
+      console.log(data);
       fillAddress(data.address);
     } else {
       const { error } = response;
